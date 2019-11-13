@@ -1,0 +1,42 @@
+mixin day(number, letter)
+  .day
+    .number #{number}
+    .dayName #{letter}
+
+mixin demoAvatar
+  figure.avatar
+    img(src="http://www.gravatar.com/avatar/0f57c9899dc6c2429c8de3e0a59098b1.jpg?s=30")
+
+aside.aside
+  header
+    .icons
+      .icon s
+      .icon b
+    +demoAvatar
+  section.calendar
+    header
+      .name Nov 2019
+      .icons
+        .icon &lt;
+        .icon &gt;
+    .days
+      +day(11, 'M')
+      +day(12, 'T')
+      +day(13, 'W')
+      +day(14, 'T')
+      +day(15, 'F')
+      +day(16, 'S')
+      +day(17, 'S')
+  section.meetings
+    header
+      .name Meetings
+      a(href="javascrip:;") View All
+    .card
+      header
+        .name Projects Overview
+        .icon ...
+      time 09 AM - 10 AM
+      .assistants
+        +demoAvatar
+        +demoAvatar
+        +demoAvatar

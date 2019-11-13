@@ -1,0 +1,32 @@
+content.content
+  background-color: var(--white)
+  padding: 50px
+  padding-bottom: 0
+  color: var(--primary)
+
+  &>header
+    font-size: 1.5em
+    margin-bottom: 25px
+
+  nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  button
+    border: none
+    font-size: 0.8em
+    line-height: 25px
+    color: var(--gray)
+
+  nav .breadcrumbs button
+    padding: 0 20px
+    border-radius: 20px
+    transition: all 250ms linear
+
+    &:hover, &.active
+      background-color: var(--primary)
+      color: var(--white)
+
+  nav .format button:hover, nav .format button.active
+    color: var(--primary)

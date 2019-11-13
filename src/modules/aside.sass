@@ -1,0 +1,70 @@
+aside.aside
+  padding: 50px 30px
+  color: var(--primary)
+  header, .icons
+    display: flex
+    align-items: center
+    justify-content: space-between
+  header .name
+    font-size: 1.2em
+    margin: 40px 0 20px 0
+  .avatar
+    margin: 0
+    img
+      border-radius: 50%
+  .icon
+    width: 20px
+    text-align: center
+
+  section.calendar
+    .days
+      display: flex
+      align-items: center
+      justify-content: space-between
+    .day
+      text-align: center
+      background-color: var(--white)
+      padding: 20px 10px
+      border-radius: 20px
+      box-shadow: 0 0 20px -8px var(--gray)
+    .day:nth-child(4)
+      background-color: var(--yellow)
+      color: var(--white)
+
+  section.meetings
+    a
+      text-decoration: none
+      color: var(--gray)
+      font-size: 0.8em
+  .card
+    background-color: var(--white)
+    box-shadow: 0 0 20px -8px var(--gray)
+    border-radius: 15px
+    padding: 15px 15px 15px 40px
+    overflow: hidden
+    position: relative
+    header
+      margin-bottom: 5px
+    .name
+      margin: 0
+    time
+      color: var(--gray)
+      font-size: 0.8em
+    .assistants
+      margin-top: 10px
+      display: flex
+      .avatar img
+        border: 1px solid var(--gray)
+        margin-right: -10px
+        transition: margin-right 250ms linear
+      &:hover
+        .avatar img
+          margin-right: 0
+  .card:after
+    position: absolute
+    content: ''
+    top: 0
+    left: 0
+    width: 15px
+    height: 100%
+    background-color: var(--tomato)

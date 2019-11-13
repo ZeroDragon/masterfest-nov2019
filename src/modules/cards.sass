@@ -1,0 +1,76 @@
+section.cards
+  display: flex
+  margin: 30px 0
+
+  section.card
+    box-shadow: 0 0 20px -8px var(--gray)
+    padding: 30px
+    margin: 10px
+    border-radius: 10px
+    width: calc(100% / 3)
+    --bg: var(--white)
+    --fg: var(--primary)
+    --icon: var(--white)
+    --bar-bg: var(--alpha-primary)
+    --bar-fg: var(--blue)
+    background-color: var(--bg)
+    color: var(--fg)
+
+    &:first-child
+      margin-left: 0
+
+    &:last-child
+      margin-right: 0
+
+    header
+      display: flex
+      text-align: center
+      align-items: center
+
+    header .icon
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      background-color: var(--fg)
+      color: var(--icon)
+      margin-right: 15px
+      line-height: 30px
+
+    summary li
+      display: flex
+      align-items: center
+      opacity: 0.6
+
+    summary li .icon
+      width: 20px
+
+    footer .completenes
+      text-align: right
+      font-size: 0.7em
+      font-weight: 700
+
+    footer .bar
+      height: 10px
+      background-color: var(--bar-bg)
+      border-radius: 5px
+      margin-top: 10px
+      overflow: hidden
+      position: relative
+
+    footer .bar .fill
+      position: absolute
+      height: 100%
+      background-color: var(--bar-fg)
+      border-radius: 5px
+
+
+
+  section.card.important
+    --bg: var(--tomato)
+    --fg: var(--white)
+    --icon: var(--primary)
+    --bar-bg: var(--alpha-white)
+    --bar-fg: var(--white)
+
+  section.card.yellow
+    --bar-fg: var(--yellow)

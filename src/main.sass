@@ -1,0 +1,46 @@
+body
+  --primary: #262B40
+  --white: #FFFFFF
+  --pale-blue: #F4F5FF
+  --gray: #BDBFD2
+  --blue: #5952DF
+  --light-blue: #D2CFF8
+  --yellow: #F89C19
+  --light-yellow: #FDE5B9
+  --tomato: #FB314D
+  --light-tomato: #FEC5CC
+  --alpha-white: rgba(255, 255, 255, 0.5)
+  --alpha-primary: rgba(38, 43, 64, 0.07)
+
+  margin: 0
+  font-family: sans-serif
+
+*
+  box-sizing: border-box
+  outline: none
+
+.app
+  display: grid
+  height: 100vh
+  grid-template-columns: 200px 1fr 400px
+  grid-template-rows: 1fr
+  grid-template-areas: "nav content aside"
+
+nav.nav
+  grid-area:nav 
+content.content
+  grid-area:content 
+aside.aside
+  grid-area:aside
+  background-color: var(--pale-blue)
+
+ul
+  list-style: none
+  padding: 0
+
+@import './modules/nav.sass'
+@import './modules/content.sass'
+@import './modules/cards.sass'
+@import './modules/files.sass'
+@import './modules/statistics.sass'
+@import './modules/aside.sass'

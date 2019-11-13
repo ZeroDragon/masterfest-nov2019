@@ -1,0 +1,13 @@
+mixin row(color, name, members, date, size)
+  .row(class=`${color}`)
+    .icon d
+    .name #{name}
+    .members #{members}
+    time.date #{date}
+    summary #{size}
+
+section.files.summary
+  header Shared Files
+  +row('blue', 'Company guidelines', '26 members', '23 Oct, 2019', '2.3Mb')
+  +row('yellow', 'Company Policy', '30 members', '17 Jul, 2019', '2.3Mb')
+  +row('tomato', 'Wireframes', '6 members', '3 Jul, 2019', '2.3Mb')

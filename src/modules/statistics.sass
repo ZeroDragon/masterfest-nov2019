@@ -1,0 +1,51 @@
+section.statistics
+  margin: 30px 0
+  header
+    font-size: 1.5em
+    margin-bottom: 25px
+  .stats
+    display: flex
+    align-items: center
+  .stat
+    width: 50%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 0 10px
+    --bg: var(--blue)
+    --fg: var(--white)
+    background-color: var(--bg)
+    color: var(--fg)
+    padding: 30px
+    border-radius: 10px
+
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+
+  .stat.yellow
+    --bg: var(--yellow)
+
+  .section.summary
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100px
+    .value
+      font-size: 2em
+    summary, footer
+      opacity: 0.8
+  .section.chart
+    position: relative
+    svg
+      transform: rotate(-90deg)
+      stroke: var(--alpha-white)
+    .front
+      stroke: var(--white)
+    .percentValue
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      font-size: 1.5em

@@ -1,0 +1,44 @@
+nav.nav
+  background-color: var(--primary)
+  color: var(--gray)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  text-align: center
+
+  header, footer
+    margin: 50px 0
+
+  header
+    font-size: 1.2em
+
+  footer
+    cursor: pointer
+
+  ul li
+    height: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 20px 0
+    position: relative
+    cursor: default
+
+    &:after
+      content: ''
+      position: absolute
+      width: 8px
+      height: 100%
+      top: 0
+      left: 0
+      background-color: var(--white)
+      border-radius: 8px
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+      opacity: 0
+      transition: opacity 250ms linear
+
+    &:hover:after,
+    &.active:after
+      opacity: 1
+

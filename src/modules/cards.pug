@@ -1,0 +1,22 @@
+mixin card(icon, name, type, members, date, percent)
+  section.card(class=`${type}`)
+    header
+      .icon #{icon}
+      .title #{name}
+    summary
+      ul
+        li
+          .icon u
+          |#{members} members
+        li
+          .icon c
+          |#{date}
+    footer
+      .completenes #{percent} %
+      .bar
+        .fill(style=`width:${percent}%;`)
+
+section.cards
+  +card('I', 'My 1st project', 'important', 5, '14 Nov, 2019', 34)
+  +card('T', 'Delivery', '', 15, '14 Nov, 2019', 14)
+  +card('P', 'Travel Stuff', 'yellow', 2, '14 Nov, 2019', 93)
